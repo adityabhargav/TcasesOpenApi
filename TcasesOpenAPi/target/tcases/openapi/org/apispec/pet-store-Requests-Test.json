@@ -1,0 +1,1853 @@
+
+{
+    "system": "Swagger-Petstore",
+    "has": {
+        "server": "http://petstore.swagger.io/api",
+        "title": "Swagger Petstore",
+        "version": "1.0.0"
+    },
+    "GET_pets": {
+        "has": {
+            "path": "/pets",
+            "server": "http://petstore.swagger.io/api",
+            "title": "Swagger Petstore",
+            "operation": "GET",
+            "version": "1.0.0"
+        },
+        "testCases": [
+            {
+                "id": 0,
+                "name": "tags.Defined='Yes'",
+                "has": {
+                    "path": "/pets",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "GET",
+                    "version": "1.0.0",
+                    "properties": "limit,limitValue,tags,tagsItemsNone,tagsValue"
+                },
+                "query": {
+                    "tags.Defined": {
+                        "has": {
+                            "explode": "true",
+                            "style": "form",
+                            "paramName": "tags"
+                        },
+                        "value": "Yes"
+                    },
+                    "tags.Type": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "value": "array"
+                    },
+                    "tags.Items.Size": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "value": "0"
+                    },
+                    "tags.Items.Contains.Type": {
+                        "has": {
+                            "itemType": "string",
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "tags.Items.Contains.Value.Length": {
+                        "has": {
+                            "itemMinLength": "0",
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "tags.Items.Unique": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "limit.Defined": {
+                        "has": {
+                            "style": "form",
+                            "paramName": "limit"
+                        },
+                        "value": "Yes"
+                    },
+                    "limit.Type": {
+                        "has": {
+                            "paramName": "limit"
+                        },
+                        "value": "integer"
+                    },
+                    "limit.Value.Is": {
+                        "has": {
+                            "format": "int32",
+                            "paramName": "limit"
+                        },
+                        "value": "< 0"
+                    }
+                }
+            },
+            {
+                "id": 1,
+                "name": "tags.Defined='No'",
+                "has": {
+                    "path": "/pets",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "GET",
+                    "version": "1.0.0"
+                },
+                "query": {
+                    "tags.Defined": {
+                        "has": {
+                            "explode": "true",
+                            "style": "form",
+                            "paramName": "tags"
+                        },
+                        "value": "No"
+                    },
+                    "tags.Type": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "tags.Items.Size": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "tags.Items.Contains.Type": {
+                        "has": {
+                            "itemType": "string",
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "tags.Items.Contains.Value.Length": {
+                        "has": {
+                            "itemMinLength": "0",
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "tags.Items.Unique": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "limit.Defined": {
+                        "has": {
+                            "style": "form",
+                            "paramName": "limit"
+                        },
+                        "value": "No"
+                    },
+                    "limit.Type": {
+                        "has": {
+                            "paramName": "limit"
+                        },
+                        "NA": true
+                    },
+                    "limit.Value.Is": {
+                        "has": {
+                            "format": "int32",
+                            "paramName": "limit"
+                        },
+                        "NA": true
+                    }
+                }
+            },
+            {
+                "id": 2,
+                "name": "tags.Items.Size='1'",
+                "has": {
+                    "path": "/pets",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "GET",
+                    "version": "1.0.0",
+                    "properties": "limit,limitValue,tags,tagsItemsLengthValid,tagsItemsNotEmpty,tagsItemsValue,tagsValue"
+                },
+                "query": {
+                    "tags.Defined": {
+                        "has": {
+                            "explode": "true",
+                            "style": "form",
+                            "paramName": "tags"
+                        },
+                        "value": "Yes"
+                    },
+                    "tags.Type": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "value": "array"
+                    },
+                    "tags.Items.Size": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "value": "1"
+                    },
+                    "tags.Items.Contains.Type": {
+                        "has": {
+                            "itemType": "string",
+                            "paramName": "tags"
+                        },
+                        "value": "string"
+                    },
+                    "tags.Items.Contains.Value.Length": {
+                        "has": {
+                            "itemMinLength": "0",
+                            "paramName": "tags"
+                        },
+                        "value": "> 0"
+                    },
+                    "tags.Items.Unique": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "limit.Defined": {
+                        "has": {
+                            "style": "form",
+                            "paramName": "limit"
+                        },
+                        "value": "Yes"
+                    },
+                    "limit.Type": {
+                        "has": {
+                            "paramName": "limit"
+                        },
+                        "value": "integer"
+                    },
+                    "limit.Value.Is": {
+                        "has": {
+                            "format": "int32",
+                            "paramName": "limit"
+                        },
+                        "value": "0"
+                    }
+                }
+            },
+            {
+                "id": 3,
+                "name": "tags.Items.Size='> 1'",
+                "has": {
+                    "path": "/pets",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "GET",
+                    "version": "1.0.0",
+                    "properties": "tags,tagsItemsLengthValid,tagsItemsMany,tagsItemsValue,tagsValue"
+                },
+                "query": {
+                    "tags.Defined": {
+                        "has": {
+                            "explode": "true",
+                            "style": "form",
+                            "paramName": "tags"
+                        },
+                        "value": "Yes"
+                    },
+                    "tags.Type": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "value": "array"
+                    },
+                    "tags.Items.Size": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "value": "> 1"
+                    },
+                    "tags.Items.Contains.Type": {
+                        "has": {
+                            "itemType": "string",
+                            "paramName": "tags"
+                        },
+                        "value": "string"
+                    },
+                    "tags.Items.Contains.Value.Length": {
+                        "has": {
+                            "itemMinLength": "0",
+                            "paramName": "tags"
+                        },
+                        "value": "0"
+                    },
+                    "tags.Items.Unique": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "value": "Yes"
+                    },
+                    "limit.Defined": {
+                        "has": {
+                            "style": "form",
+                            "paramName": "limit"
+                        },
+                        "value": "No"
+                    },
+                    "limit.Type": {
+                        "has": {
+                            "paramName": "limit"
+                        },
+                        "NA": true
+                    },
+                    "limit.Value.Is": {
+                        "has": {
+                            "format": "int32",
+                            "paramName": "limit"
+                        },
+                        "NA": true
+                    }
+                }
+            },
+            {
+                "id": 4,
+                "name": "tags.Items.Unique='No'",
+                "has": {
+                    "path": "/pets",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "GET",
+                    "version": "1.0.0",
+                    "properties": "limit,limitValue,tags,tagsItemsLengthValid,tagsItemsMany,tagsItemsNotEmpty,tagsItemsValue,tagsValue"
+                },
+                "query": {
+                    "tags.Defined": {
+                        "has": {
+                            "explode": "true",
+                            "style": "form",
+                            "paramName": "tags"
+                        },
+                        "value": "Yes"
+                    },
+                    "tags.Type": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "value": "array"
+                    },
+                    "tags.Items.Size": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "value": "> 1"
+                    },
+                    "tags.Items.Contains.Type": {
+                        "has": {
+                            "itemType": "string",
+                            "paramName": "tags"
+                        },
+                        "value": "string"
+                    },
+                    "tags.Items.Contains.Value.Length": {
+                        "has": {
+                            "itemMinLength": "0",
+                            "paramName": "tags"
+                        },
+                        "value": "> 0"
+                    },
+                    "tags.Items.Unique": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "value": "No"
+                    },
+                    "limit.Defined": {
+                        "has": {
+                            "style": "form",
+                            "paramName": "limit"
+                        },
+                        "value": "Yes"
+                    },
+                    "limit.Type": {
+                        "has": {
+                            "paramName": "limit"
+                        },
+                        "value": "integer"
+                    },
+                    "limit.Value.Is": {
+                        "has": {
+                            "format": "int32",
+                            "paramName": "limit"
+                        },
+                        "value": "> 0"
+                    }
+                }
+            },
+            {
+                "id": 5,
+                "name": "tags.Type=null",
+                "has": {
+                    "path": "/pets",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "GET",
+                    "version": "1.0.0",
+                    "properties": "tags"
+                },
+                "query": {
+                    "tags.Defined": {
+                        "has": {
+                            "explode": "true",
+                            "style": "form",
+                            "paramName": "tags"
+                        },
+                        "value": "Yes"
+                    },
+                    "tags.Type": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "failure": true,
+                        "value": "null"
+                    },
+                    "tags.Items.Size": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "tags.Items.Contains.Type": {
+                        "has": {
+                            "itemType": "string",
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "tags.Items.Contains.Value.Length": {
+                        "has": {
+                            "itemMinLength": "0",
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "tags.Items.Unique": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "limit.Defined": {
+                        "has": {
+                            "style": "form",
+                            "paramName": "limit"
+                        },
+                        "value": "No"
+                    },
+                    "limit.Type": {
+                        "has": {
+                            "paramName": "limit"
+                        },
+                        "NA": true
+                    },
+                    "limit.Value.Is": {
+                        "has": {
+                            "format": "int32",
+                            "paramName": "limit"
+                        },
+                        "NA": true
+                    }
+                }
+            },
+            {
+                "id": 6,
+                "name": "tags.Type='Not array'",
+                "has": {
+                    "path": "/pets",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "GET",
+                    "version": "1.0.0",
+                    "properties": "tags"
+                },
+                "query": {
+                    "tags.Defined": {
+                        "has": {
+                            "explode": "true",
+                            "style": "form",
+                            "paramName": "tags"
+                        },
+                        "value": "Yes"
+                    },
+                    "tags.Type": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "failure": true,
+                        "value": "Not array"
+                    },
+                    "tags.Items.Size": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "tags.Items.Contains.Type": {
+                        "has": {
+                            "itemType": "string",
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "tags.Items.Contains.Value.Length": {
+                        "has": {
+                            "itemMinLength": "0",
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "tags.Items.Unique": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "limit.Defined": {
+                        "has": {
+                            "style": "form",
+                            "paramName": "limit"
+                        },
+                        "value": "No"
+                    },
+                    "limit.Type": {
+                        "has": {
+                            "paramName": "limit"
+                        },
+                        "NA": true
+                    },
+                    "limit.Value.Is": {
+                        "has": {
+                            "format": "int32",
+                            "paramName": "limit"
+                        },
+                        "NA": true
+                    }
+                }
+            },
+            {
+                "id": 7,
+                "name": "tags.Items.Contains.Type=null",
+                "has": {
+                    "path": "/pets",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "GET",
+                    "version": "1.0.0",
+                    "properties": "tags,tagsValue"
+                },
+                "query": {
+                    "tags.Defined": {
+                        "has": {
+                            "explode": "true",
+                            "style": "form",
+                            "paramName": "tags"
+                        },
+                        "value": "Yes"
+                    },
+                    "tags.Type": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "value": "array"
+                    },
+                    "tags.Items.Size": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "value": "1"
+                    },
+                    "tags.Items.Contains.Type": {
+                        "has": {
+                            "itemType": "string",
+                            "paramName": "tags"
+                        },
+                        "failure": true,
+                        "value": "null"
+                    },
+                    "tags.Items.Contains.Value.Length": {
+                        "has": {
+                            "itemMinLength": "0",
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "tags.Items.Unique": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "limit.Defined": {
+                        "has": {
+                            "style": "form",
+                            "paramName": "limit"
+                        },
+                        "value": "No"
+                    },
+                    "limit.Type": {
+                        "has": {
+                            "paramName": "limit"
+                        },
+                        "NA": true
+                    },
+                    "limit.Value.Is": {
+                        "has": {
+                            "format": "int32",
+                            "paramName": "limit"
+                        },
+                        "NA": true
+                    }
+                }
+            },
+            {
+                "id": 8,
+                "name": "tags.Items.Contains.Type='Not string'",
+                "has": {
+                    "path": "/pets",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "GET",
+                    "version": "1.0.0",
+                    "properties": "tags,tagsValue"
+                },
+                "query": {
+                    "tags.Defined": {
+                        "has": {
+                            "explode": "true",
+                            "style": "form",
+                            "paramName": "tags"
+                        },
+                        "value": "Yes"
+                    },
+                    "tags.Type": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "value": "array"
+                    },
+                    "tags.Items.Size": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "value": "1"
+                    },
+                    "tags.Items.Contains.Type": {
+                        "has": {
+                            "itemType": "string",
+                            "paramName": "tags"
+                        },
+                        "failure": true,
+                        "value": "Not string"
+                    },
+                    "tags.Items.Contains.Value.Length": {
+                        "has": {
+                            "itemMinLength": "0",
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "tags.Items.Unique": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "limit.Defined": {
+                        "has": {
+                            "style": "form",
+                            "paramName": "limit"
+                        },
+                        "value": "No"
+                    },
+                    "limit.Type": {
+                        "has": {
+                            "paramName": "limit"
+                        },
+                        "NA": true
+                    },
+                    "limit.Value.Is": {
+                        "has": {
+                            "format": "int32",
+                            "paramName": "limit"
+                        },
+                        "NA": true
+                    }
+                }
+            },
+            {
+                "id": 9,
+                "name": "limit.Type=null",
+                "has": {
+                    "path": "/pets",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "GET",
+                    "version": "1.0.0",
+                    "properties": "limit"
+                },
+                "query": {
+                    "tags.Defined": {
+                        "has": {
+                            "explode": "true",
+                            "style": "form",
+                            "paramName": "tags"
+                        },
+                        "value": "No"
+                    },
+                    "tags.Type": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "tags.Items.Size": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "tags.Items.Contains.Type": {
+                        "has": {
+                            "itemType": "string",
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "tags.Items.Contains.Value.Length": {
+                        "has": {
+                            "itemMinLength": "0",
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "tags.Items.Unique": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "limit.Defined": {
+                        "has": {
+                            "style": "form",
+                            "paramName": "limit"
+                        },
+                        "value": "Yes"
+                    },
+                    "limit.Type": {
+                        "has": {
+                            "paramName": "limit"
+                        },
+                        "failure": true,
+                        "value": "null"
+                    },
+                    "limit.Value.Is": {
+                        "has": {
+                            "format": "int32",
+                            "paramName": "limit"
+                        },
+                        "NA": true
+                    }
+                }
+            },
+            {
+                "id": 10,
+                "name": "limit.Type='Not integer'",
+                "has": {
+                    "path": "/pets",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "GET",
+                    "version": "1.0.0",
+                    "properties": "limit"
+                },
+                "query": {
+                    "tags.Defined": {
+                        "has": {
+                            "explode": "true",
+                            "style": "form",
+                            "paramName": "tags"
+                        },
+                        "value": "No"
+                    },
+                    "tags.Type": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "tags.Items.Size": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "tags.Items.Contains.Type": {
+                        "has": {
+                            "itemType": "string",
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "tags.Items.Contains.Value.Length": {
+                        "has": {
+                            "itemMinLength": "0",
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "tags.Items.Unique": {
+                        "has": {
+                            "paramName": "tags"
+                        },
+                        "NA": true
+                    },
+                    "limit.Defined": {
+                        "has": {
+                            "style": "form",
+                            "paramName": "limit"
+                        },
+                        "value": "Yes"
+                    },
+                    "limit.Type": {
+                        "has": {
+                            "paramName": "limit"
+                        },
+                        "failure": true,
+                        "value": "Not integer"
+                    },
+                    "limit.Value.Is": {
+                        "has": {
+                            "format": "int32",
+                            "paramName": "limit"
+                        },
+                        "NA": true
+                    }
+                }
+            }
+        ]
+    },
+    "POST_pets": {
+        "has": {
+            "path": "/pets",
+            "server": "http://petstore.swagger.io/api",
+            "title": "Swagger Petstore",
+            "operation": "POST",
+            "version": "1.0.0"
+        },
+        "testCases": [
+            {
+                "id": 0,
+                "name": "Body.Defined='Yes'",
+                "has": {
+                    "path": "/pets",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "POST",
+                    "version": "1.0.0",
+                    "properties": "application-json,application-jsonName,application-jsonNameLengthValid,application-jsonNameNotEmpty,application-jsonNameValue,application-jsonProperties,application-jsonTag,application-jsonTagLengthValid,application-jsonTagNotEmpty,application-jsonTagValue,application-jsonValue,Content"
+                },
+                "request": {
+                    "Body.Defined": {
+                        "value": "Yes"
+                    },
+                    "Body.Media-Type": {
+                        "has": {
+                            "mediaType": "application/json"
+                        },
+                        "value": "application-json"
+                    },
+                    "Body.application-json.Type": {
+                        "value": "object"
+                    },
+                    "Body.application-json.Value.Properties.name.Defined": {
+                        "value": "Yes"
+                    },
+                    "Body.application-json.Value.Properties.name.Type": {
+                        "value": "string"
+                    },
+                    "Body.application-json.Value.Properties.name.Value.Length": {
+                        "value": "> 0"
+                    },
+                    "Body.application-json.Value.Properties.tag.Defined": {
+                        "value": "Yes"
+                    },
+                    "Body.application-json.Value.Properties.tag.Type": {
+                        "value": "string"
+                    },
+                    "Body.application-json.Value.Properties.tag.Value.Length": {
+                        "value": "> 0"
+                    },
+                    "Body.application-json.Value.Properties.Additional": {
+                        "value": "Yes"
+                    }
+                }
+            },
+            {
+                "id": 1,
+                "name": "Body.application-json.Value.Properties.name.Value.Length='0'",
+                "has": {
+                    "path": "/pets",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "POST",
+                    "version": "1.0.0",
+                    "properties": "application-json,application-jsonName,application-jsonNameLengthValid,application-jsonNameValue,application-jsonProperties,application-jsonValue,Content"
+                },
+                "request": {
+                    "Body.Defined": {
+                        "value": "Yes"
+                    },
+                    "Body.Media-Type": {
+                        "has": {
+                            "mediaType": "application/json"
+                        },
+                        "value": "application-json"
+                    },
+                    "Body.application-json.Type": {
+                        "value": "object"
+                    },
+                    "Body.application-json.Value.Properties.name.Defined": {
+                        "value": "Yes"
+                    },
+                    "Body.application-json.Value.Properties.name.Type": {
+                        "value": "string"
+                    },
+                    "Body.application-json.Value.Properties.name.Value.Length": {
+                        "value": "0"
+                    },
+                    "Body.application-json.Value.Properties.tag.Defined": {
+                        "value": "No"
+                    },
+                    "Body.application-json.Value.Properties.tag.Type": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.tag.Value.Length": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.Additional": {
+                        "value": "No"
+                    }
+                }
+            },
+            {
+                "id": 2,
+                "name": "Body.application-json.Value.Properties.tag.Value.Length='0'",
+                "has": {
+                    "path": "/pets",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "POST",
+                    "version": "1.0.0",
+                    "properties": "application-json,application-jsonName,application-jsonNameLengthValid,application-jsonNameNotEmpty,application-jsonNameValue,application-jsonProperties,application-jsonTag,application-jsonTagLengthValid,application-jsonTagValue,application-jsonValue,Content"
+                },
+                "request": {
+                    "Body.Defined": {
+                        "value": "Yes"
+                    },
+                    "Body.Media-Type": {
+                        "has": {
+                            "mediaType": "application/json"
+                        },
+                        "value": "application-json"
+                    },
+                    "Body.application-json.Type": {
+                        "value": "object"
+                    },
+                    "Body.application-json.Value.Properties.name.Defined": {
+                        "value": "Yes"
+                    },
+                    "Body.application-json.Value.Properties.name.Type": {
+                        "value": "string"
+                    },
+                    "Body.application-json.Value.Properties.name.Value.Length": {
+                        "value": "> 0"
+                    },
+                    "Body.application-json.Value.Properties.tag.Defined": {
+                        "value": "Yes"
+                    },
+                    "Body.application-json.Value.Properties.tag.Type": {
+                        "value": "string"
+                    },
+                    "Body.application-json.Value.Properties.tag.Value.Length": {
+                        "value": "0"
+                    },
+                    "Body.application-json.Value.Properties.Additional": {
+                        "value": "Yes"
+                    }
+                }
+            },
+            {
+                "id": 3,
+                "name": "Body.Defined='No'",
+                "has": {
+                    "path": "/pets",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "POST",
+                    "version": "1.0.0"
+                },
+                "request": {
+                    "Body.Defined": {
+                        "failure": true,
+                        "value": "No"
+                    },
+                    "Body.Media-Type": {
+                        "NA": true
+                    },
+                    "Body.application-json.Type": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.name.Defined": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.name.Type": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.name.Value.Length": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.tag.Defined": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.tag.Type": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.tag.Value.Length": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.Additional": {
+                        "NA": true
+                    }
+                }
+            },
+            {
+                "id": 4,
+                "name": "Body.Media-Type='Other'",
+                "has": {
+                    "path": "/pets",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "POST",
+                    "version": "1.0.0",
+                    "properties": "Content"
+                },
+                "request": {
+                    "Body.Defined": {
+                        "value": "Yes"
+                    },
+                    "Body.Media-Type": {
+                        "has": {
+                            "excluded": "'application/json'"
+                        },
+                        "failure": true,
+                        "value": "Other"
+                    },
+                    "Body.application-json.Type": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.name.Defined": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.name.Type": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.name.Value.Length": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.tag.Defined": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.tag.Type": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.tag.Value.Length": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.Additional": {
+                        "NA": true
+                    }
+                }
+            },
+            {
+                "id": 5,
+                "name": "Body.application-json.Type=null",
+                "has": {
+                    "path": "/pets",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "POST",
+                    "version": "1.0.0",
+                    "properties": "application-json,Content"
+                },
+                "request": {
+                    "Body.Defined": {
+                        "value": "Yes"
+                    },
+                    "Body.Media-Type": {
+                        "has": {
+                            "mediaType": "application/json"
+                        },
+                        "value": "application-json"
+                    },
+                    "Body.application-json.Type": {
+                        "failure": true,
+                        "value": "null"
+                    },
+                    "Body.application-json.Value.Properties.name.Defined": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.name.Type": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.name.Value.Length": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.tag.Defined": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.tag.Type": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.tag.Value.Length": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.Additional": {
+                        "NA": true
+                    }
+                }
+            },
+            {
+                "id": 6,
+                "name": "Body.application-json.Type='Not object'",
+                "has": {
+                    "path": "/pets",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "POST",
+                    "version": "1.0.0",
+                    "properties": "application-json,Content"
+                },
+                "request": {
+                    "Body.Defined": {
+                        "value": "Yes"
+                    },
+                    "Body.Media-Type": {
+                        "has": {
+                            "mediaType": "application/json"
+                        },
+                        "value": "application-json"
+                    },
+                    "Body.application-json.Type": {
+                        "failure": true,
+                        "value": "Not object"
+                    },
+                    "Body.application-json.Value.Properties.name.Defined": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.name.Type": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.name.Value.Length": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.tag.Defined": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.tag.Type": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.tag.Value.Length": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.Additional": {
+                        "NA": true
+                    }
+                }
+            },
+            {
+                "id": 7,
+                "name": "Body.application-json.Value.Properties.name.Defined='No'",
+                "has": {
+                    "path": "/pets",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "POST",
+                    "version": "1.0.0",
+                    "properties": "application-json,application-jsonValue,Content"
+                },
+                "request": {
+                    "Body.Defined": {
+                        "value": "Yes"
+                    },
+                    "Body.Media-Type": {
+                        "has": {
+                            "mediaType": "application/json"
+                        },
+                        "value": "application-json"
+                    },
+                    "Body.application-json.Type": {
+                        "value": "object"
+                    },
+                    "Body.application-json.Value.Properties.name.Defined": {
+                        "failure": true,
+                        "value": "No"
+                    },
+                    "Body.application-json.Value.Properties.name.Type": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.name.Value.Length": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.tag.Defined": {
+                        "value": "No"
+                    },
+                    "Body.application-json.Value.Properties.tag.Type": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.tag.Value.Length": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.Additional": {
+                        "value": "No"
+                    }
+                }
+            },
+            {
+                "id": 8,
+                "name": "Body.application-json.Value.Properties.name.Type=null",
+                "has": {
+                    "path": "/pets",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "POST",
+                    "version": "1.0.0",
+                    "properties": "application-json,application-jsonName,application-jsonProperties,application-jsonValue,Content"
+                },
+                "request": {
+                    "Body.Defined": {
+                        "value": "Yes"
+                    },
+                    "Body.Media-Type": {
+                        "has": {
+                            "mediaType": "application/json"
+                        },
+                        "value": "application-json"
+                    },
+                    "Body.application-json.Type": {
+                        "value": "object"
+                    },
+                    "Body.application-json.Value.Properties.name.Defined": {
+                        "value": "Yes"
+                    },
+                    "Body.application-json.Value.Properties.name.Type": {
+                        "failure": true,
+                        "value": "null"
+                    },
+                    "Body.application-json.Value.Properties.name.Value.Length": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.tag.Defined": {
+                        "value": "No"
+                    },
+                    "Body.application-json.Value.Properties.tag.Type": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.tag.Value.Length": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.Additional": {
+                        "value": "No"
+                    }
+                }
+            },
+            {
+                "id": 9,
+                "name": "Body.application-json.Value.Properties.name.Type='Not string'",
+                "has": {
+                    "path": "/pets",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "POST",
+                    "version": "1.0.0",
+                    "properties": "application-json,application-jsonName,application-jsonProperties,application-jsonValue,Content"
+                },
+                "request": {
+                    "Body.Defined": {
+                        "value": "Yes"
+                    },
+                    "Body.Media-Type": {
+                        "has": {
+                            "mediaType": "application/json"
+                        },
+                        "value": "application-json"
+                    },
+                    "Body.application-json.Type": {
+                        "value": "object"
+                    },
+                    "Body.application-json.Value.Properties.name.Defined": {
+                        "value": "Yes"
+                    },
+                    "Body.application-json.Value.Properties.name.Type": {
+                        "failure": true,
+                        "value": "Not string"
+                    },
+                    "Body.application-json.Value.Properties.name.Value.Length": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.tag.Defined": {
+                        "value": "No"
+                    },
+                    "Body.application-json.Value.Properties.tag.Type": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.tag.Value.Length": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.Additional": {
+                        "value": "No"
+                    }
+                }
+            },
+            {
+                "id": 10,
+                "name": "Body.application-json.Value.Properties.tag.Type=null",
+                "has": {
+                    "path": "/pets",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "POST",
+                    "version": "1.0.0",
+                    "properties": "application-json,application-jsonName,application-jsonNameLengthValid,application-jsonNameValue,application-jsonProperties,application-jsonTag,application-jsonValue,Content"
+                },
+                "request": {
+                    "Body.Defined": {
+                        "value": "Yes"
+                    },
+                    "Body.Media-Type": {
+                        "has": {
+                            "mediaType": "application/json"
+                        },
+                        "value": "application-json"
+                    },
+                    "Body.application-json.Type": {
+                        "value": "object"
+                    },
+                    "Body.application-json.Value.Properties.name.Defined": {
+                        "value": "Yes"
+                    },
+                    "Body.application-json.Value.Properties.name.Type": {
+                        "value": "string"
+                    },
+                    "Body.application-json.Value.Properties.name.Value.Length": {
+                        "value": "0"
+                    },
+                    "Body.application-json.Value.Properties.tag.Defined": {
+                        "value": "Yes"
+                    },
+                    "Body.application-json.Value.Properties.tag.Type": {
+                        "failure": true,
+                        "value": "null"
+                    },
+                    "Body.application-json.Value.Properties.tag.Value.Length": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.Additional": {
+                        "value": "No"
+                    }
+                }
+            },
+            {
+                "id": 11,
+                "name": "Body.application-json.Value.Properties.tag.Type='Not string'",
+                "has": {
+                    "path": "/pets",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "POST",
+                    "version": "1.0.0",
+                    "properties": "application-json,application-jsonName,application-jsonNameLengthValid,application-jsonNameValue,application-jsonProperties,application-jsonTag,application-jsonValue,Content"
+                },
+                "request": {
+                    "Body.Defined": {
+                        "value": "Yes"
+                    },
+                    "Body.Media-Type": {
+                        "has": {
+                            "mediaType": "application/json"
+                        },
+                        "value": "application-json"
+                    },
+                    "Body.application-json.Type": {
+                        "value": "object"
+                    },
+                    "Body.application-json.Value.Properties.name.Defined": {
+                        "value": "Yes"
+                    },
+                    "Body.application-json.Value.Properties.name.Type": {
+                        "value": "string"
+                    },
+                    "Body.application-json.Value.Properties.name.Value.Length": {
+                        "value": "0"
+                    },
+                    "Body.application-json.Value.Properties.tag.Defined": {
+                        "value": "Yes"
+                    },
+                    "Body.application-json.Value.Properties.tag.Type": {
+                        "failure": true,
+                        "value": "Not string"
+                    },
+                    "Body.application-json.Value.Properties.tag.Value.Length": {
+                        "NA": true
+                    },
+                    "Body.application-json.Value.Properties.Additional": {
+                        "value": "No"
+                    }
+                }
+            }
+        ]
+    },
+    "GET_pets-id": {
+        "has": {
+            "path": "/pets/{id}",
+            "server": "http://petstore.swagger.io/api",
+            "title": "Swagger Petstore",
+            "operation": "GET",
+            "version": "1.0.0"
+        },
+        "testCases": [
+            {
+                "id": 0,
+                "name": "id.Defined='Yes'",
+                "has": {
+                    "path": "/pets/{id}",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "GET",
+                    "version": "1.0.0",
+                    "properties": "id,idValue"
+                },
+                "path": {
+                    "id.Defined": {
+                        "has": {
+                            "style": "simple",
+                            "paramName": "id"
+                        },
+                        "value": "Yes"
+                    },
+                    "id.Type": {
+                        "has": {
+                            "paramName": "id"
+                        },
+                        "value": "integer"
+                    },
+                    "id.Value.Is": {
+                        "has": {
+                            "format": "int64",
+                            "paramName": "id"
+                        },
+                        "value": "< 0"
+                    }
+                }
+            },
+            {
+                "id": 1,
+                "name": "id.Value.Is='0'",
+                "has": {
+                    "path": "/pets/{id}",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "GET",
+                    "version": "1.0.0",
+                    "properties": "id,idValue"
+                },
+                "path": {
+                    "id.Defined": {
+                        "has": {
+                            "style": "simple",
+                            "paramName": "id"
+                        },
+                        "value": "Yes"
+                    },
+                    "id.Type": {
+                        "has": {
+                            "paramName": "id"
+                        },
+                        "value": "integer"
+                    },
+                    "id.Value.Is": {
+                        "has": {
+                            "format": "int64",
+                            "paramName": "id"
+                        },
+                        "value": "0"
+                    }
+                }
+            },
+            {
+                "id": 2,
+                "name": "id.Value.Is='> 0'",
+                "has": {
+                    "path": "/pets/{id}",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "GET",
+                    "version": "1.0.0",
+                    "properties": "id,idValue"
+                },
+                "path": {
+                    "id.Defined": {
+                        "has": {
+                            "style": "simple",
+                            "paramName": "id"
+                        },
+                        "value": "Yes"
+                    },
+                    "id.Type": {
+                        "has": {
+                            "paramName": "id"
+                        },
+                        "value": "integer"
+                    },
+                    "id.Value.Is": {
+                        "has": {
+                            "format": "int64",
+                            "paramName": "id"
+                        },
+                        "value": "> 0"
+                    }
+                }
+            },
+            {
+                "id": 3,
+                "name": "id.Defined='No'",
+                "has": {
+                    "path": "/pets/{id}",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "GET",
+                    "version": "1.0.0"
+                },
+                "path": {
+                    "id.Defined": {
+                        "has": {
+                            "style": "simple",
+                            "paramName": "id"
+                        },
+                        "failure": true,
+                        "value": "No"
+                    },
+                    "id.Type": {
+                        "has": {
+                            "paramName": "id"
+                        },
+                        "NA": true
+                    },
+                    "id.Value.Is": {
+                        "has": {
+                            "format": "int64",
+                            "paramName": "id"
+                        },
+                        "NA": true
+                    }
+                }
+            },
+            {
+                "id": 4,
+                "name": "id.Type=null",
+                "has": {
+                    "path": "/pets/{id}",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "GET",
+                    "version": "1.0.0",
+                    "properties": "id"
+                },
+                "path": {
+                    "id.Defined": {
+                        "has": {
+                            "style": "simple",
+                            "paramName": "id"
+                        },
+                        "value": "Yes"
+                    },
+                    "id.Type": {
+                        "has": {
+                            "paramName": "id"
+                        },
+                        "failure": true,
+                        "value": "null"
+                    },
+                    "id.Value.Is": {
+                        "has": {
+                            "format": "int64",
+                            "paramName": "id"
+                        },
+                        "NA": true
+                    }
+                }
+            },
+            {
+                "id": 5,
+                "name": "id.Type='Not integer'",
+                "has": {
+                    "path": "/pets/{id}",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "GET",
+                    "version": "1.0.0",
+                    "properties": "id"
+                },
+                "path": {
+                    "id.Defined": {
+                        "has": {
+                            "style": "simple",
+                            "paramName": "id"
+                        },
+                        "value": "Yes"
+                    },
+                    "id.Type": {
+                        "has": {
+                            "paramName": "id"
+                        },
+                        "failure": true,
+                        "value": "Not integer"
+                    },
+                    "id.Value.Is": {
+                        "has": {
+                            "format": "int64",
+                            "paramName": "id"
+                        },
+                        "NA": true
+                    }
+                }
+            }
+        ]
+    },
+    "DELETE_pets-id": {
+        "has": {
+            "path": "/pets/{id}",
+            "server": "http://petstore.swagger.io/api",
+            "title": "Swagger Petstore",
+            "operation": "DELETE",
+            "version": "1.0.0"
+        },
+        "testCases": [
+            {
+                "id": 0,
+                "name": "id.Defined='Yes'",
+                "has": {
+                    "path": "/pets/{id}",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "DELETE",
+                    "version": "1.0.0",
+                    "properties": "id,idValue"
+                },
+                "path": {
+                    "id.Defined": {
+                        "has": {
+                            "style": "simple",
+                            "paramName": "id"
+                        },
+                        "value": "Yes"
+                    },
+                    "id.Type": {
+                        "has": {
+                            "paramName": "id"
+                        },
+                        "value": "integer"
+                    },
+                    "id.Value.Is": {
+                        "has": {
+                            "format": "int64",
+                            "paramName": "id"
+                        },
+                        "value": "< 0"
+                    }
+                }
+            },
+            {
+                "id": 1,
+                "name": "id.Value.Is='0'",
+                "has": {
+                    "path": "/pets/{id}",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "DELETE",
+                    "version": "1.0.0",
+                    "properties": "id,idValue"
+                },
+                "path": {
+                    "id.Defined": {
+                        "has": {
+                            "style": "simple",
+                            "paramName": "id"
+                        },
+                        "value": "Yes"
+                    },
+                    "id.Type": {
+                        "has": {
+                            "paramName": "id"
+                        },
+                        "value": "integer"
+                    },
+                    "id.Value.Is": {
+                        "has": {
+                            "format": "int64",
+                            "paramName": "id"
+                        },
+                        "value": "0"
+                    }
+                }
+            },
+            {
+                "id": 2,
+                "name": "id.Value.Is='> 0'",
+                "has": {
+                    "path": "/pets/{id}",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "DELETE",
+                    "version": "1.0.0",
+                    "properties": "id,idValue"
+                },
+                "path": {
+                    "id.Defined": {
+                        "has": {
+                            "style": "simple",
+                            "paramName": "id"
+                        },
+                        "value": "Yes"
+                    },
+                    "id.Type": {
+                        "has": {
+                            "paramName": "id"
+                        },
+                        "value": "integer"
+                    },
+                    "id.Value.Is": {
+                        "has": {
+                            "format": "int64",
+                            "paramName": "id"
+                        },
+                        "value": "> 0"
+                    }
+                }
+            },
+            {
+                "id": 3,
+                "name": "id.Defined='No'",
+                "has": {
+                    "path": "/pets/{id}",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "DELETE",
+                    "version": "1.0.0"
+                },
+                "path": {
+                    "id.Defined": {
+                        "has": {
+                            "style": "simple",
+                            "paramName": "id"
+                        },
+                        "failure": true,
+                        "value": "No"
+                    },
+                    "id.Type": {
+                        "has": {
+                            "paramName": "id"
+                        },
+                        "NA": true
+                    },
+                    "id.Value.Is": {
+                        "has": {
+                            "format": "int64",
+                            "paramName": "id"
+                        },
+                        "NA": true
+                    }
+                }
+            },
+            {
+                "id": 4,
+                "name": "id.Type=null",
+                "has": {
+                    "path": "/pets/{id}",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "DELETE",
+                    "version": "1.0.0",
+                    "properties": "id"
+                },
+                "path": {
+                    "id.Defined": {
+                        "has": {
+                            "style": "simple",
+                            "paramName": "id"
+                        },
+                        "value": "Yes"
+                    },
+                    "id.Type": {
+                        "has": {
+                            "paramName": "id"
+                        },
+                        "failure": true,
+                        "value": "null"
+                    },
+                    "id.Value.Is": {
+                        "has": {
+                            "format": "int64",
+                            "paramName": "id"
+                        },
+                        "NA": true
+                    }
+                }
+            },
+            {
+                "id": 5,
+                "name": "id.Type='Not integer'",
+                "has": {
+                    "path": "/pets/{id}",
+                    "server": "http://petstore.swagger.io/api",
+                    "title": "Swagger Petstore",
+                    "operation": "DELETE",
+                    "version": "1.0.0",
+                    "properties": "id"
+                },
+                "path": {
+                    "id.Defined": {
+                        "has": {
+                            "style": "simple",
+                            "paramName": "id"
+                        },
+                        "value": "Yes"
+                    },
+                    "id.Type": {
+                        "has": {
+                            "paramName": "id"
+                        },
+                        "failure": true,
+                        "value": "Not integer"
+                    },
+                    "id.Value.Is": {
+                        "has": {
+                            "format": "int64",
+                            "paramName": "id"
+                        },
+                        "NA": true
+                    }
+                }
+            }
+        ]
+    }
+}
